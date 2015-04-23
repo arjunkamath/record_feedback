@@ -6,6 +6,9 @@
     "name": "Muaz Khan",
     "email": "muazkh@gmail.com"
   },
+  "dependencies": {
+    "aws-sdk": "*"
+  },
   "description": "Records audio/video separately as wav/webm. POST both files in single HttpPost-Request to Node.js (FormData). Node.js code saves both files into disk. Node.js code invokes ffmpeg to merge wav/webm in single webm file. The merged webm file's URL is returne",
   "contributors": [
     {

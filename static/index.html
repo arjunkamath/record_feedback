@@ -18,6 +18,8 @@
         <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
         <meta name="author" content="Muaz Khan">
         <script src="https://www.webrtc-experiment.com/RecordRTC.js"> </script>
+		<script type="text/javascript" src="../s3upload.js"></script>
+		
         <style>
             html { background-color: #f7f7f7; }
 
@@ -49,23 +51,15 @@
         </style>
     </head>
     <body>
-        <h1><a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC">RecordRTC</a> <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC/RecordRTC-to-Nodejs">over Node.js</a></h1>
-        <p>
-            <video></video> 
+        
+		<h1> <b> FEEDBACK FORM </b></h1>
+        <p>Why not give audio feedback?
+            <button id="btn-start-recording">Start</button>
+            <button id="btn-stop-recording" disabled="">Stop</button>        
+		<video></video> 
         </p><hr />
-        
-        <div>
-            <label id="percentage">0%</label>
-            <progress id="progress-bar" value=0></progress><br />
-        </div>
-            
-        <hr />
-
-        <div>
-            <button id="btn-start-recording">Start Recording</button>
-            <button id="btn-stop-recording" disabled="">Stop Recording</button>
-        </div>
-        
+		
+        <hr />        
         <script>
             // fetching DOM references
             var btnStartRecording = document.querySelector('#btn-start-recording');
@@ -287,8 +281,5 @@
                 startRecording.disabled = false;
             };
         </script>
-        <footer style="width:100%;position: fixed; right: 0; text-align: center;color:red;">
-            <a href="https://www.WebRTC-Experiment.com">www.WebRTC-Experiment.com</a>
-        </footer>
     </body>
 </html>
