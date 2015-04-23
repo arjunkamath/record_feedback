@@ -57,9 +57,37 @@
             <button id="btn-start-recording">Start</button>
             <button id="btn-stop-recording" disabled="">Stop</button>        
 		<video></video> 
-        </p><hr />
 		
-        <hr />        
+		<p>Tell us your opinion!</p>
+
+<form action="URL to form script" method="POST">
+
+Your name: <br>
+<input type="text" name="realname"><br>
+<br>
+
+Your feedback: <br>
+<textarea name="comments" rows="15" cols="50"></textarea><br><br>
+
+<div id="emotion">
+
+    <input type="radio" name="emotion" id="happy" />
+       <label for="happy"><img src="https://c1.staticflickr.com/9/8264/8672563345_5b57672119_b.jpg" width="50" height="50" alt="I'm happy" /></label>
+
+    <input type="radio" name="emotion" id="neutral" />
+        <label for="happy"><img src="http://ragefaces.memesoftware.com/faces/large/neutral-poker-face-l.png" width="50" height="50" alt="I'm neutral" /></label>
+
+    <input type="radio" name="emotion" id="sad" />
+        <label for="happy"><img src="http://www.clipartbest.com/cliparts/4cb/eAq/4cbeAqXcg.jpeg" width="50" height="50" alt="I'm sad" /></label>
+
+
+    </div>
+</div>
+
+<input type="submit" value="Leave feedback">
+ 
+</form>
+		       
         <script>
             // fetching DOM references
             var btnStartRecording = document.querySelector('#btn-start-recording');
