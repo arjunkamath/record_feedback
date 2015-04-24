@@ -44,10 +44,7 @@ function start(route, handle) {
 			}
 			
         });
-		
-		
     }
-
     http.createServer(onRequest).listen(config.port);
 }
 
