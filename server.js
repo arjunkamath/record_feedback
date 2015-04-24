@@ -32,8 +32,7 @@ function start(route, handle) {
         req.addListener('end', function() {
             route(handle, pathname, res, postData);
 			
-			console.log(postData);
-			console.log('hello');
+			//console.log(postData);
 			
 			if(postData.indexOf("positive") > -1){
 					request.get('https://agile-beach-2376.herokuapp.com/fire-event/positive');
