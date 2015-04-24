@@ -4,10 +4,9 @@
 
 var config = require('./config'),
     http = require('http'),
-    url = require('url'),
-	pg = require('pg');
+    url = require('url');
 	
-var display_request = require('request');
+var request = require('request');
 	
 /* pg.connect(process.env.DATABASE_URL, function(err, client) {
   var query = client.query('SELECT * FROM your_table');
@@ -19,28 +18,28 @@ var display_request = require('request');
 
 function start(route, handle) {
 
-    function onRequest(request, response) {
+    function onRequest(req, res) {
 
-        var pathname = url.parse(request.url).pathname,
+        var pathname = url.parse(req.url).pathname,
             postData = '';
 
-        request.setEncoding('utf8');
+        req.setEncoding('utf8');
 
-        request.addListener('data', function(postDataChunk) {
+        req.addListener('data', function(postDataChunk) {
             postData += postDataChunk;
         });
 
-        request.addListener('end', function() {
-            route(handle, pathname, response, postData);
+        req.addListener('end', function() {
+            route(handle, pathname, res, postData);
 			
 			console.log(postData);
 			
 			if(postData.indexOf("positive") > -1){
-					display_request.get('https://agile-beach-2376.herokuapp.com/fire-event/positive');
+					request.get('https://agile-beach-2376.herokuapp.com/fire-event/positive');
 			} else if(postData.indexOf("neutral") > -1){
-					display_request.get('https://agile-beach-2376.herokuapp.com/fire-event/neutral');
+					request.get('https://agile-beach-2376.herokuapp.com/fire-event/neutral');
 			} else if(postData.indexOf("negative") > -1){
-					display_request.get('https://agile-beach-2376.herokuapp.com/fire-event/negative');
+					request.get('https://agile-beach-2376.herokuapp.com/fire-event/negative');
 			}
 			
         });
