@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>RecordRTC over Node.js</title>
+        <title>Give me feedback</title>
         <script>
             if (location.href.indexOf('file:') == 0) {
                 document.write('<h1 style="color:red;">Please load this HTML file on HTTP or HTTPS.</h1>');
@@ -19,6 +19,7 @@
         <meta name="author" content="Muaz Khan">
         <script src="https://www.webrtc-experiment.com/RecordRTC.js"> </script>
 		<script type="text/javascript" src="../s3upload.js"></script>
+		<script type="text/javascript" src="../upload_feedback.js"></script>
 		
         <style>
             html { background-color: #f7f7f7; }
@@ -60,31 +61,34 @@
 		
 		<p>Tell us your opinion!</p>
 
-<form action="URL to form script" method="POST">
+<form action="/" method="post">
 
 Your name: <br>
 <input type="text" name="realname"><br>
 <br>
 
 Your feedback: <br>
-<textarea name="comments" rows="15" cols="50"></textarea><br><br>
+<textarea name="comments" rows="15" cols="40"></textarea><br><br>
+
+<p id="p1">Hello World!</p>
+
 
 <div id="emotion">
 
-    <input type="radio" name="emotion" id="happy" />
+   <input type="radio" name="emotion" value="positive" checked>
        <label for="happy"><img src="https://c1.staticflickr.com/9/8264/8672563345_5b57672119_b.jpg" width="50" height="50" alt="I'm happy" /></label>
 
-    <input type="radio" name="emotion" id="neutral" />
+    <input type="radio" name="emotion" value="neutral">
         <label for="happy"><img src="http://ragefaces.memesoftware.com/faces/large/neutral-poker-face-l.png" width="50" height="50" alt="I'm neutral" /></label>
 
-    <input type="radio" name="emotion" id="sad" />
+    <input type="radio" name="emotion" value="negative">
         <label for="happy"><img src="http://www.clipartbest.com/cliparts/4cb/eAq/4cbeAqXcg.jpeg" width="50" height="50" alt="I'm sad" /></label>
 
-
-    </div>
 </div>
 
 <input type="submit" value="Leave feedback">
+
+
  
 </form>
 		       
