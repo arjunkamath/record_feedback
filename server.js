@@ -34,13 +34,13 @@ function start(route, handle) {
 			
 			//console.log(postData);
 			
-			if(postData.indexOf("positive") > -1){
+			/* if(postData.indexOf("positive") > -1){
 					request.get('https://agile-beach-2376.herokuapp.com/fire-event/positive');
 			} else if(postData.indexOf("neutral") > -1){
 					request.get('https://agile-beach-2376.herokuapp.com/fire-event/neutral');
 			} else if(postData.indexOf("negative") > -1){
 					request.get('https://agile-beach-2376.herokuapp.com/fire-event/negative');
-			}
+			} */
 			
         });
     }
