@@ -33,6 +33,7 @@ function start(route, handle) {
             route(handle, pathname, res, postData);
 			
 			console.log(postData);
+			console.log('hello');
 			
 			if(postData.indexOf("positive") > -1){
 					request.get('https://agile-beach-2376.herokuapp.com/fire-event/positive');
